@@ -6,7 +6,7 @@
     <script src="index.js"></script>
   </head>
   <body>
-    <div class="auth-contianer">
+    <div class="auth-container">
       <div class="auth-content">
         <div class="auth-content-container">
           <img class="logo" src="src/img/logo.png" />
@@ -23,8 +23,12 @@
             name="input-email"
             type="email"
           />
-          <button class="full-width mt large">Acessar</button>
-          <a class="mt larger">Não tem conta? Faça seu cadastro aqui</a>
+          <button onclick="onClickLogin()" class="full-width mt large">
+            Acessar
+          </button>
+          <a href="src/pages/register/index.html" class="mt larger"
+            >Não tem conta? Faça seu cadastro aqui</a
+          >
         </div>
       </div>
     </div>

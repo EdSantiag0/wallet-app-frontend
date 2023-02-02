@@ -29,19 +29,19 @@ h3 {
 }
 
 h4 {
-  font-size: 16px;
-  color: #7c7c7c;
+  font-size: 18px;
   font-weight: 700;
   margin: 0px;
   padding: 0px;
+  color: #7c7c7c;
 }
 
 p {
   font-size: 14px;
   font-weight: 500;
-  color: #7c7c7c;
   margin: 0px;
   padding: 0px;
+  color: #7c7c7c;
 }
 
 label {
@@ -67,6 +67,7 @@ button {
   border-color: #5936cd;
   border-width: 2px;
   border-style: solid;
+  cursor: pointer;
 }
 
 button.small {
@@ -129,7 +130,7 @@ input {
   height: auto;
 }
 
-.auth-contianer {
+.auth-container {
   width: 100vw;
   height: 100vh;
   display: flex;
