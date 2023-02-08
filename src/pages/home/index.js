@@ -6,7 +6,7 @@ const onLogout = () => {
 const onDeleteItem = async (id) => {
   try {
     const email = localStorage.getItem("@WalletApp:userEmail");
-    await fetch(`https://mp-wallet-app-api.herokuapp.com/finances?date=${id}`, {
+    await fetch(`https://mp-wallet-app-api.herokuapp.com/finances/${id}`, {
       method: "DELETE",
       headers: {
         email: email,
@@ -65,21 +65,20 @@ const renderFinancesList = (data) => {
 
     //category
     const categoryTd = document.createElement("td");
-    const categoryText = document.createTextNode(item.title);
+    const categoryText = document.createTextNode(item.name);
     categoryTd.appendChild(categoryText);
     tableRow.appendChild(categoryTd);
 
     //date
     const dateTd = document.createElement("td");
     const dateText = document.createTextNode(
-      new Date(item.date).toLocaleString()
+      new Date(item.date).toLocaleDateString()
     );
     dateTd.appendChild(dateText);
     tableRow.appendChild(dateTd);
 
     //value
     const valueTd = document.createElement("td");
-    valueTd.className = "center";
     const valueText = document.createTextNode(
       new Intl.NumberFormat("pt-BR", {
         style: "currency",
@@ -189,7 +188,7 @@ const renderFinanceElements = (data) => {
   const balanceTextElement = document.createElement("h1");
   balanceTextElement.id = "balance-element";
   balanceTextElement.className = "mt smaller  ";
-  balanceTextElement.style.color = "#5936cd";
+  balanceTextElement.style.color = "#06bee1";
   balanceTextElement.appendChild(balanceText);
   financeCard4.appendChild(balanceTextElement);
 };
@@ -305,7 +304,7 @@ const onCreateFinanceRelease = async (target) => {
     const title = target[0].value;
     const value = Number(target[1].value);
     const date = target[2].value;
-    const category = Number(target[2].value);
+    const category = Number(target[3].value);
     const result = await onCallAddFinance({
       title,
       value,
