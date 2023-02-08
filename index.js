@@ -17,7 +17,7 @@ const onClickLogin = async () => {
     return;
   }
   const result = await validateUser(email); //Fazer a validação do usuario
-  console.log(result);
+
   if (result.error) {
     alert("Falha ao validar e-mail"); //Caso der erro no result
     return;
@@ -25,5 +25,5 @@ const onClickLogin = async () => {
   localStorage.setItem("@WalletApp:userEmail", result.email); //Salva a informação do e-mail
   localStorage.setItem("@WalletApp:userName", result.name);
   localStorage.setItem("@WalletApp:userId", result.id);
-  window.open("./src/pages/home/index.html", "_self");
+  window.open("./src/pages/home/index.html", "_self"); //Apos digitar o e-mail vai para a pagina home
 };

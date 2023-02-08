@@ -20,7 +20,6 @@ const onCallRegister = async (email, name) => {
     );
 
     const user = await response.json();
-
     return user;
   } catch (error) {
     return { error };
