@@ -1,3 +1,5 @@
+<img src="https://github.com/EdSantiag0/wallet-app-frontend/blob/main/src/img/preview.png" alt="Wallet Preview" heith="500">
+
 # Wallet App
 
 ## Intruduction
